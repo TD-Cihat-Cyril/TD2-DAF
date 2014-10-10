@@ -1,6 +1,6 @@
 ﻿<html>
 
-<title>Annuaire</title>
+<title>Annuaire Immatriculation</title>
 
 <body>
 
@@ -58,6 +58,8 @@ if($total) {
 
       echo '<td bgcolor="#669999"><b><u> Supprimer </u></b></td>' ;
 
+       echo '<td bgcolor="#669999"><b><u> Ajouter </u></b></td>' ;
+
       echo '</tr>'."\n";
 
     //  affichage des résultats    
@@ -76,7 +78,7 @@ if($total) {
 		
 		echo '<td bgcolor="#CCCCCC"><a href="supprimer.php?idVisiteur='.$row["idVisiteur"].'&mois='.$row["mois"].'"> X </a></td>';
 
-      
+      echo '<td bgcolor="#CCCCCC"><a href="ajouter.php?idVisiteur='.$row["idVisiteur"].'&mois='.$row["mois"].'"> X </a></td>';
 
       echo '</tr>'."\n";
 
