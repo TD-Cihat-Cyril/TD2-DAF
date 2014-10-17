@@ -3,7 +3,7 @@
 <title>Annuaire</title>
 
 <body>
-<a href="ajouter.php">ajouter</a>
+
 <?
 
 // information pour la connection à le DB
@@ -19,13 +19,11 @@ $db = 'my_sionapolitano';
  
 // connection à la DB
 
-$link = mysql_connect ($host,$user,$pass) or die ('Erreur : '.mysql_error() );
+$link = mysql_connect ("localhost", "root", "") or die ('Erreur : '.mysql_error() );
 
 mysql_select_db($db) or die ('Erreur :'.mysql_error());
 
-
-
-
+ 
 // requête SQL qui compte le nombre total d'enregistrement dans la table et qui
 
 //récupère tous les enregistrements
@@ -50,33 +48,29 @@ if($total) {
 
         echo '<tr>';
 
-        echo '<td bgcolor="#669999"><b><u> ID Visiteur </u></b></td>';
+        echo '<td bgcolor="#669999"><b><u>immatriculation</u></b></td>';
 
-        echo '<td bgcolor="#669999"><b><u> Immatriculation </u></b></td>';
+        echo '<td bgcolor="#669999"><b><u>id</u></b></td>';
 
-      echo '<td bgcolor="#669999"><b><u> Mois </u></b></td>';
+      echo '<td bgcolor="#669999"><b><u>Mois</u></b></td>';
 
-        echo '<td bgcolor="#669999"><b><u> Modifier </u></b></td>';
-
-      echo '<td bgcolor="#669999"><b><u> Supprimer </u></b></td>' ;
+       
 
       echo '</tr>'."\n";
 
-    //  affichage des résultats    
+    // lecture et affichage des résultats sur 2 colonnes, 1 résultat par ligne.    
 
     while($row = mysql_fetch_array($result)) {
 
         echo '<tr>';
 
-        echo '<td bgcolor="#CCCCCC">'.$row["idVisiteur"].'</td>';
-		
-		echo '<td bgcolor="#CCCCCC">'.$row["ImmatVehicule"].'</td>';
+        echo '<td bgcolor="#CCCCCC">'.$row["ImmatVehicule"].'</td>';
 
-		echo '<td bgcolor="#CCCCCC">'.$row["mois"].'</td>';
-		
-		echo '<td bgcolor="#CCCCCC"><a href="modif.php?idVisiteur='.$row["idVisiteur"].'&mois='.$row["mois"].'"> M </a></td>';
-		
-		echo '<td bgcolor="#CCCCCC"><a href="supprimer.php?idVisiteur='.$row["idVisiteur"].'&mois='.$row["mois"].'"> X </a></td>';
+        echo '<td bgcolor="#CCCCCC">'.$row["idVisiteur"].'</td>';
+
+      echo '<td bgcolor="#CCCCCC">'.$row["mois"].'</td>';
+
+      
 
       echo '</tr>'."\n";
 
@@ -85,7 +79,6 @@ if($total) {
     echo '</table>'."\n";
 
     // fin du tableau.
-    
 
 }
 
