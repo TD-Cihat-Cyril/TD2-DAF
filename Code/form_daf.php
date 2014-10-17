@@ -23,7 +23,7 @@ $link = mysql_connect ($host,$user,$pass) or die ('Erreur : '.mysql_error() );
 
 mysql_select_db($db) or die ('Erreur :'.mysql_error());
 
- 
+ <a href="ajouter.php">
 // requête SQL qui compte le nombre total d'enregistrement dans la table et qui
 
 //récupère tous les enregistrements
@@ -58,7 +58,6 @@ if($total) {
 
       echo '<td bgcolor="#669999"><b><u> Supprimer </u></b></td>' ;
 
-       echo '<td bgcolor="#669999"><b><u> Ajouter </u></b></td>' ;
 
       echo '</tr>'."\n";
 
@@ -78,7 +77,6 @@ if($total) {
 		
 		echo '<td bgcolor="#CCCCCC"><a href="supprimer.php?idVisiteur='.$row["idVisiteur"].'&mois='.$row["mois"].'"> X </a></td>';
 
-      echo '<td bgcolor="#CCCCCC"><a href="ajouter.php?idVisiteur='.$row["idVisiteur"].'&mois='.$row["mois"].'"> X </a></td>';
 
       echo '</tr>'."\n";
 

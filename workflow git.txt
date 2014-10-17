@@ -1,0 +1,3 @@
+On a un compte altervista chacun, avec un git commun ou on commit tous les deux heures, et de faire des pull à chaque modification. Cela nous permet d'avoir nos projet à jour de travailler simultanément. Chaque modification est bien détaillé dans les commit de chaque push. On averti l'un comme l'autre d'avoir modifié par messagerie instantané (gmail, facebook, SMS). Nous forkons le dossier initial, pour chaque différents type de TP, pour garder l'original. Ceci étant dis, nous définissons la partie sur laquel travailler pour ne pas entrer en conflit.
+
+	Cihat & Cyril
